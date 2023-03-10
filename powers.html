@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powers Table</title>
+    <script>
+        function powersMultiplication() {
+
+            // inputs/variables
+            let integer = parseFloat(document.getElementById("input").value);
+            let table = "";
+
+            // math loop
+            for (let i = 0; i <= 31; i++) {
+                let answer = Math.pow(integer, i);
+                table += `${integer}^${i} = ${answer}<br>`
+            }
+            
+            // output
+            document.getElementById("output").innerHTML = table;
+        }
+    </script>
+</head>
+<body>
+    <h1>Powers Table</h1>
+    <input type="text" id="input">
+    <button type="button" onclick="powersMultiplication()">Click for table</button><br>
+    <br>
+    <div id="output"></div>
+</body>
+</html>

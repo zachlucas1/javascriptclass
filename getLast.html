@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Last Value</title>
+    <script>
+        function inputOutput(){
+        let list = [-3, 0, 7.1, 5];
+
+        document.getElementById('outputList').innerHTML = `Array: ${list}`;
+        document.getElementById('output').innerHTML = `Last Number: ${getLast(list)}`;
+        }
+
+        function getLast(list){
+            let last = list[list.length - 1];
+            return last;
+        }
+    </script>
+</head>
+<body>
+    <h2>Get Last Value</h2>
+    <button type="button" onclick="inputOutput()">Show List and Last Value</button>
+    <div id="outputList"></div>
+    <div id="output"></div>
+</body>
+</html>

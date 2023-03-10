@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <script>
+        function timeFunction() {
+            // gets time from computer
+            var now = new Date();
+            var month = now.getMonth();
+            var dayOfMonth = now.getDate();
+            var dayOfWeek = now.getDay();
+
+            //if it is saturday, sunday, new years, fourth of july, or christmas you can sleep in
+            if ((dayOfWeek == 0 || dayOfWeek == 6) || (month == 1 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4) || (month == 11 && dayOfMonth == 25)) {
+                document.getElementById("dealOutput").innerHTML = "You can sleep in!";
+
+            //otherwise get up
+            } else {
+                document.getElementById("dealOutput").innerHTML = "Get up!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Can you sleep in today?</h1>
+    <div>
+        <button type="button" onclick="timeFunction()">Click to find out!</button>
+    <br>
+        <br>
+    <div id="dealOutput"></div>
+</body>
+</html>

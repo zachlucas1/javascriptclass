@@ -1,0 +1,36 @@
+<!-- Write a defining table and a JavaScript program that reads two numbers from two text fields and then outputs to a div "True" if both of the numbers are greater than 5 or if their sum is greater than 20. Otherwise your program should output "False" to the div. -->
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script>
+    function mathFunction(){
+        //input
+        let num1 = parseFloat(document.getElementById('one').value);
+        let num2 = parseFloat(document.getElementById('two').value);
+        let sum = num1 + num2;
+
+        //if statement
+        if (((num1 > 5) && (num2 > 5)) || (sum > 20)){
+            answer = 'True';
+        } else {
+            answer = 'False';
+        }
+
+        //output
+        document.getElementById('output').innerHTML = answer;
+    }
+
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="mathFunction()">Click</button>
+<div id="output"></div>
+</body>
+</html>

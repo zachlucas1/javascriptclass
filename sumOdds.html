@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Sum Odds</title>
+
+    <script>
+        function oddsFunction() {
+            // variables
+            let text = "";
+            let sum = 0;
+
+            //user input
+            let integer = parseFloat(document.getElementById("integer").value);
+
+            //for loop 
+            for (let i = 1; i <= integer; i += 2) {
+
+                //lists odd numbers 1 - input
+                text += i + "<br>";
+
+                //adds odd numbers 1 - input
+                sum += i;
+            }
+
+            //output
+            document.getElementById('result').innerHTML = text;
+            document.getElementById('output').innerHTML = "Sum = " + sum;
+        }
+    </script>
+</head>
+<body>
+    <h1>Sum of the Odds</h1>
+    <p>Please enter a number <input type="text" id="integer"></p>
+    <button type="button" onclick="oddsFunction()">Click For Your Results</button>
+    <div id="result"></div>
+    <p id="output"></p>
+</body>
+</html>

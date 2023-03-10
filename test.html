@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function testTriangle() {
+            var r = triangleArea(4, 2, 5);
+            document.getElementById('outputDiv').innerHTML = r;
+        }
+
+        // Computes and returns the area of a
+        // triangle with side lengths a, b, and c.
+        function triangleArea(a, b, c) {
+            var s = (a + b + c) / 2;
+            var area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+            return area;
+        }
+
+    </script>
+</head>
+<body>
+    <button type="button" onclick="testTriangle()">Click for an array</button>
+    <div id="outputDiv"></div>
+</body>
+</html>

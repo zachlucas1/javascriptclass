@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>What Shoes Should You Wear?</title>
+
+    <script>
+        function shoes() {
+            // Get the weather from the user.
+            let weather = document.getElementById('weather').value;
+            let footwear;
+
+            //if statements
+            if (weather = "hot") {
+                footwear = "sandals";
+            } else if (weather = "rain") {
+                footwear = "galoshes";
+            } else if (weather = "snow") {
+                footwear = "boots";
+            } else {
+                footwear = "shoes";
+            }
+
+            // Output
+            document.getElementById('result').innerHTML = footwear;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>What shoes should you wear?</h1>
+    <p>What is the weather? (hot, rain, snow, etc.) <input type="text" id="weather" size="5" maxlength="10"></p>
+    <p><button type="button" onclick="shoes()">Click For Your Results!</button></p>
+    <div id="result"></div>
+</body>
+
+</html>

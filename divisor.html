@@ -1,0 +1,37 @@
+<!-- Write a defining table and a JavaScript program that reads three integers named start, end, and divisor from three text fields. Your program must output to a div all the integers between start and end, inclusive, that are evenly divisible by divisor. The output integers must be separated by spaces. For example, if a user entered 17, 30, and 5, your program would output "20 25 30" (without the quotes) because those are the only integers between 17 and 30 (including 17 and 30) that are evenly divisible by 5. -->
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script>
+    function divisor(){
+
+        //input
+        let start = parseInt(document.getElementById('start').value);
+        let end = parseInt(document.getElementById('end').value);
+        let divisor = parseInt(document.getElementById('divisor').value);
+        text = "";
+
+        //for loop
+        for (let i = start; i <= end; i++) {
+            if (i % divisor == 0){
+                text += i + " ";
+            }
+        }
+
+        //output
+        document.getElementById('output').innerHTML = text;
+    }
+</script>
+</head>
+
+<body>
+Start: <input type="text" id="start" size="5"><br>
+End: <input type="text" id="end" size="5"><br>
+Divisor: <input type="text" id="divisor" size="5"><br>
+<button type="button" onclick="divisor()">Click</button>
+<div id="output"></div>
+</body>
+</html>

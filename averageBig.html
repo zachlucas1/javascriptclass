@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Big</title>
+    <script>
+        function inputOutput(){
+        var list = [-72.3, 3000, 873, 2312, 68, 7501.3];
+        var score = averageBig(list);
+
+        document.getElementById('outputList').innerHTML = `Array: ${list}`;
+        document.getElementById('output').innerHTML = `Average: ${score}`;
+        }
+
+        function averageBig(list){
+            let average = 0;
+            var list2 = [];
+            //gets all numbers over 1000 and pushes it to list2[]
+            for (let i = 0; i < list.length; i++){
+                let number = list[i];
+                if(number >= 1000){
+                    list2.push(number);
+                }
+                document.getElementById('outputList2').innerHTML = `List over 1000: ${list2}`
+            }
+
+            //gets list2[] and gets the average of all values over 1000
+            for (let x = 0; x < list2.length; x++){
+                // let currentNum = list2[x];
+                average += list2[x];
+            }
+            average = (average / list2.length).toFixed(1);
+            return average;
+        }
+    </script>
+</head>
+<body>
+    <h2>Average Big</h2>
+    <button type="button" onclick="inputOutput()">Show list and average</button>
+    <div id="outputList"></div>
+    <div id="outputList2"></div>
+    <div id="output"></div>
+</body>
+</html>

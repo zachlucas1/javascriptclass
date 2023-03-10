@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>MPG</title>
+
+    <script>
+        function run() {
+            // Input and converts to a number
+            let beginning = parseFloat(document.getElementById('beginningInput').value);
+            let ending = parseFloat(document.getElementById('endingInput').value);
+            let gallons = parseFloat(document.getElementById('gallonsInput').value);
+
+            // Math to convert quarts to liters
+            let mpg = (ending - beginning) / gallons;
+
+            // Output
+            document.getElementById('mpgDiv').innerHTML = mpg;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Miles Per Gallon Converter</h2>
+    Beginning Odometer Reading <input type="text" id="beginningInput">
+    <br>
+    Ending Odometer Reading <input type="text" id="endingInput">
+    <br>
+    Number of Gallons Used <input type="text" id="gallonsInput">
+    <br>
+    <button type="button" onclick="run()">Convert</button>
+    <br>
+        <br>
+    MPG:<div id="mpgDiv"></div>
+</body>
+</html>
