@@ -14,6 +14,7 @@
             var dayOfWeek = now.getDay();
 
             //if it is saturday, sunday, new years, fourth of july, or christmas you can sleep in
+            // added test comment
             if ((dayOfWeek == 0 || dayOfWeek == 6) || (month == 1 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4) || (month == 11 && dayOfMonth == 25)) {
                 document.getElementById("dealOutput").innerHTML = "You can sleep in!";
 
